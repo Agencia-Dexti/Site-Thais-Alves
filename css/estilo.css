@@ -1,0 +1,904 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Alexandria", sans-serif;
+    color: var(--chumbo);
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --azul: #0c5189;
+    --off: #f7f7f7;
+    --rosa: #f780a9;
+    --chumbo: #32363a;
+    --rosa-escuro: #af0c4f;
+    --azul-claro: #91cbe8;
+    --azul-bebe: #e6f2ff;
+}
+
+/*INÍCIO ESTILOS REUTILIZAVEIS*/
+.largura-maxima{
+    max-width: 980px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.bg-off{
+    background-color: var(--off);
+}
+
+.bg-azul{
+    background-color: var(--azul);
+}
+
+.container-hero{
+    scroll-margin-top: 68px;
+}
+
+.container-especialidade,
+.container-beneficios,
+.container-sobre,
+.container-atendimento{
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 90px;
+    scroll-margin-top: 30px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+main{
+    width: 100%;
+    position: relative;
+    top: 68px;
+}
+
+h2{
+    font-family: 'El Messiri', sans-serif;
+    font-size: 30px;
+    color: var(--rosa-escuro);
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.titulo-textos{
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+p{
+    font-size: 18px;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+.p-cards{
+    font-size: 16px;
+}
+
+.texto-rosa{
+    color: var(--rosa);
+}
+
+strong{
+    font-weight: 600;
+}
+    
+.limita-paragrafo{
+    max-width: 700px;
+    text-align: justify;
+    margin: 0 auto;
+}
+
+.btn-ca{
+    max-width: 250px;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--off);
+    background-color: var(--rosa);
+    padding: 10px 25px;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+.btn-ca:hover{
+    background: linear-gradient(90deg, var(--rosa-escuro), var(--rosa));
+}
+
+.botao-whats{
+        width: 50px;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        z-index: 1;
+    }
+
+.botao-whats img{
+    width: 100%;
+}
+/*FIM ESTILOS REUTILIZAVEIS*/
+
+/*INÍCIO ESTILOS HEADER*/
+header{
+    width: 100%;
+    min-height: 48px;
+    position: fixed;
+    padding: 10px 0;
+    box-shadow: 0 0 10px 1px #9b9b9b;
+    z-index: 1;
+}
+
+.topo{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.logo-topo{
+    width: 180px;
+}
+
+.lista-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.links-menu:hover{
+    color: var(--rosa);
+}
+
+.menu-contato{
+    border: 2px solid var(--rosa);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.menu-contato:hover{
+    background-color: var(--rosa);
+    color: var(--azul);
+}
+/*FIM ESTILOS HEADER*/
+
+/*INÍCIO ESTILOS SEÇÃO HERO*/
+.container-hero{
+    width: 100%;
+    background: linear-gradient(90deg, var(--azul), var(--azul), var(--azul), #1d77c0, #1d77c0);
+}
+
+.bg-hero{
+    width: 100%;
+    height: 100%;
+}
+
+.subcont-hero{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.texto-hero{
+    max-width: 470px;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+h1{
+    color: var(--off);
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 56px;
+}
+
+.texto-hero p{
+    color: var(--off);
+    font-weight: 300;
+    width: 90%;
+}
+
+.img-thais-hero{
+    width: 390px;
+    height: 390px;
+    background: linear-gradient(315deg, var(--rosa), var(--rosa), var(--off), var(--off), var(--off));
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px var(--chumbo);
+}
+
+.img-thais-hero::before{
+    content: "";
+    width: 370px;
+    height: 370px;
+    background-image: url('../img/Thais-Hero.jpeg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+/*FIM ESTILOS SEÇÃO HERO*/
+
+/*INÍCIO ESTILOS SEÇÃO ESPECIALIDADE*/
+.subcont-cards{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 55px;
+    gap: 20px;
+}
+
+.card{
+    max-width: 290px;
+    background-color: var(--off);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 30px;
+    gap: 15px;
+    border-radius: 35px 15px;
+    border: 2px solid var(--rosa);
+}
+
+h3{
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h3::before{
+    content: "";
+    width: 32px;
+    height: 32px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.foco::before{
+    background-image: url('../img/ícones/Foco.webp');
+}
+
+.pratica::before{
+    background-image: url('../img/ícones/Prática.webp');
+}
+
+.mudanca::before{
+    background-image: url('../img/ícones/Cérebro.webp');
+}
+/*FIM ESTILOS SEÇÃO ESPECIALIDADE*/
+
+/*INÍCIO ESTILOS SEÇÃO FAIXA*/
+.container-faixa{
+    width: 100%;
+    height: 200px;
+    background-image: url('../img/Flor\ Dente-de-Leão.webp');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h4{
+    color: var(--off);
+    background: linear-gradient(90deg, var(--azul), #2887d4);
+    font-size: 24px;
+    font-weight: 500;
+    padding: 6px 30px;
+    margin-bottom: 3px;
+    border-radius: 10px;
+}
+
+.texto-faixa-2{
+    color: var(--off);
+    background: linear-gradient(90deg, var(--azul), #2887d4);
+    font-size: 24px;
+    font-weight: 500;
+    padding: 6px 30px;
+    margin-bottom: 3px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, var(--rosa-escuro), var(--rosa));
+}
+/*FIM ESTILOS SEÇÃO FAIXA*/
+
+/*INÍCIO ESTILOS SEÇÃO BANEFICIOS*/
+.subcont-beneficios{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-top: 55px;
+}
+
+.texto-beneficios{
+    min-width: 410px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.lista-beneficios{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.itens-beneficios{
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: first baseline;
+    gap: 10px;
+}
+
+.itens-beneficios::before{
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: var(--azul);
+}
+
+.mulher-paz{
+    width: 100%;
+    max-width: 500px;
+    min-height: 300px;
+    background-image: url('../img/Mulher\ em\ paz.webp');
+    background-size: cover;
+    background-position: right;
+    border-radius: 15px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.mulher-paz::after{
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--azul);
+    border-radius: 15px;
+}
+/*FIM ESTILOS SEÇÃO BANEFICIOS*/
+
+/*INÍCIO ESTILOS SEÇÃO SOBRE*/
+.container-sobre{
+    width: 100%;
+    background-color: var(--azul-bebe);
+    background-image: url('../img/Pattern\ 6.png');
+    background-size: cover;
+    border-radius: 0 160px 0 160px ;
+}
+
+.subcont-sobre{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.cont-img-texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.img-thais-sobre{
+    width: 240px;
+    height: 240px;
+    background: linear-gradient(315deg, var(--rosa), var(--rosa), var(--off), var(--off), var(--off));
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px var(--chumbo);
+}
+
+.img-thais-sobre::before{
+    content: "";
+    width: 230px;
+    height: 230px;
+    background-image: url('../img/Thais-Hero.jpeg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.p-crp{
+    font-size: 16px;
+}
+
+.texto-sobre{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    color: var(--off);
+    margin-bottom: 25px;
+}
+/*FIM ESTILOS SEÇÃO SOBRE*/
+
+/*INÍCIO ESTILOS SEÇÃO ATENDIMENTO*/
+.como-funciona{
+    margin-top: 45px;
+    margin-bottom: 70px;
+}
+
+.lista-funciona{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.itens-funciona{
+    max-width: 335px;
+    font-weight: 300;
+    background-color: var(--off);
+    border: 2px solid var(--azul);
+    text-align: center;
+    padding: 20px 20px;
+    border-radius: 15px 8px 15px 8px;
+}
+
+.link-atendimento{
+    margin-top: 55px;
+    text-align: center;
+}
+/*FIM ESTILOS SEÇÃO ATENDIMENTO*/
+
+/*INÍCIO ESTILOS SEÇÃO FORMULÁRIO*/
+.container-formulario{
+    width: 100%;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    background-image: url('../img/Pattern\ 11.png');
+    background-size: 120%;
+}
+
+.subcont-formulario{
+    width: 100%;
+    background: linear-gradient(90deg, var(--azul), #1d77c0);
+    padding: 60px 20px 65px 20px;
+    box-shadow: 0 0 10px 1px var(--chumbo);
+}
+
+.subcont-formulario h2{
+    color: var(--off);
+}
+
+.form-contato{
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.campo-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.nome-form{
+    color: var(--off);
+}
+
+.input-form{
+    background-color: #f7f7f7;
+    border: none;
+    border-bottom: 4px solid var(--rosa);
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 6px;
+    color: var(--chumbo);
+}
+
+.input-form::placeholder{
+    color: var(--chumbo);
+    opacity: 0.5;
+    font-weight: 300;
+}
+/*FIM ESTILOS SEÇÃO FORMULÁRIO*/
+
+/*INÍCIO ESTILOS SEÇÃO RODAPÉ*/
+.container-rodape{
+    width: 100%;
+    border-top: 10px solid var(--rosa);
+    position: relative;
+    top: 68px;
+}
+
+.subcont-rodape{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+    padding: 80px 0;
+}
+
+.logo-rodape{
+    width: 220px;
+}
+
+.contatos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+}
+
+.whats,
+.insta{
+    color: var(--off);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.whats::before,
+.insta::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.whats::before{
+    background-image: url('../img/ícones/WhatsApp.webp');
+}
+
+.insta::before{
+    background-image: url('../img/ícones/Instagram.webp');
+}
+
+.subcont-direitos{
+    box-shadow: 0 0 8px 0px #042e52;
+}
+
+.texto-direitos{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 0;
+}
+
+h5{
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--off);
+}
+
+.braxti{
+    color: var(--off);
+    font-weight: 400;
+}
+/*FIM ESTILOS SEÇÃO RODAPÉ*/
+
+
+/*INÍCIO ESTILOS MEDIA QUERY*/
+@media (min-width: 768px){
+    .img-thais-mobile{
+        display: none;
+    }
+}
+
+@media (max-width: 979px){
+    .topo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 5px 0;
+    }
+
+    main{
+        width: 100%;
+        position: relative;
+        top: 110px;
+    }
+
+    .container-hero{
+        scroll-margin-top: 110px;
+    }
+
+    .container-beneficios,
+    .container-sobre,
+    .container-atendimento,
+    .container-especialidade{
+        scroll-margin-top: 90px;
+    }
+
+    .subcont-cards{
+        max-width: 80%;
+        margin: 40px auto 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card{
+        max-width: 100%;
+        background-color: var(--off);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px 30px;
+        gap: 15px;
+        border-radius: 30px 15px;
+        border: 2px solid var(--rosa);
+    }
+
+    .img-thais{
+        min-height: 330px;
+        background-position: center;
+    }
+
+    .subcont-atendimento{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .atendimento-online,
+    .como-funciona{
+        width: 100%;
+        max-width: 650px;
+    }
+
+    .container-rodape{
+        top: 120px;
+    }
+}
+
+@media (max-width: 767px){
+    .bg-hero{
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #0c5189, #0c5189, #0c5189, #0c5189e5, #0c518900), url('../img/Pattern.webp');
+        background-size: 220%;
+        background-position: right;
+    }
+
+    .texto-hero{
+        max-width: 380px;
+    }
+
+    h1{
+        font-size: 36px;
+    }
+    
+    .link-contato{
+        display: none;
+    }
+
+    .subcont-cards{
+        max-width: 100%;
+    }
+
+    h4{
+        font-size: 22px;
+    }
+
+    .mulher-paz{
+        display: none;
+    }
+
+    .subcont-sobre{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .img-thais{
+        display: none;
+    }
+
+    .texto-sobre{
+        width: 100%;
+    }
+
+    .texto-sobre h2{
+        margin: 0 auto 25px auto;
+    }
+
+    .img-thais-mobile{
+        width: 50%;
+        margin: 0 auto;
+        min-height: 250px;
+        background-image: url('../img/Profissional\ Thais.webp');
+        background-size: cover;
+        position: relative;
+        border-radius: 15px;
+    }
+
+    .img-thais-mobile::after{
+        content: "";
+        position: absolute;
+        top: 7px;
+        left: 7px;
+        width: 100%;
+        height: 100%;
+        border: 3px solid var(--rosa);
+        border-radius: 15px;
+    }
+
+    .subcont-rodape{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+        padding: 70px 0;
+    }
+}
+
+@media (max-width: 480px){
+    .botao-whats{
+        width: 45px;
+    }
+
+    h2{
+        font-size: 26px;
+    }
+
+    .links-menu, 
+    .link-contato{
+        font-size: 14px;
+    }
+
+    .bg-hero{
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(150deg, #0c5189, #0c5189, #0c5189, #0c5189f3, #0c5189be), url('../img/Pattern.webp');
+        background-size: 320%;
+        background-position: right;
+    }
+
+    .texto-hero{
+        align-items: center;
+        text-align: center;
+    }
+
+    .limita-paragrafo{
+        text-align: center;
+    }
+
+    .card{
+        min-height: 300px;
+    }
+
+    h4{
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    .texto-beneficios{
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .titulo-textos{
+        text-align: center;
+    }
+
+    .img-thais-mobile{
+        width: 60%;
+    }
+
+    .como-funciona{
+        width: 100%;
+        border-radius: 10px;
+        border: 2px solid var(--azul);
+        padding: 20px 5px 20px 15px;
+    }
+
+    .subcont-rodape{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 60px 0;
+    }
+
+    .logo-rodape{
+        width: 200px;
+    }
+
+    .contatos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 370px){
+    .logo-topo{
+        width: 150px;
+    }
+
+    h1{
+        font-size: 34px;
+        line-height: 50px;
+    }
+
+    h2{
+        font-size: 24px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    .links-menu, 
+    .link-contato{
+        font-size: 13px;
+    }
+}
