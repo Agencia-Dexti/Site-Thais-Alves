@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width" initial-scale="1.0">
         <link rel="shortcut icon" href="img/ícones/Favicon.ico">
         <title>Thais Alves - Psicóloga</title>
-        <meta name="description" content="Thais Alves, psicóloga especializada em Terapia Cognitivo-Comportamental (TCC),
-        oferece atendimento online com foco em autoconhecimento, equilíbrio emocional e qualidade de vida. Agende sua 
-        consulta.">
+        <meta name="description" content="Thais Alves, psicóloga especializada em Terapia Cognitivo-Comportamental 
+        (TCC),oferece atendimento online com foco em autoconhecimento, equilíbrio emocional e qualidade de vida. 
+        Agende sua consulta.">
         <link rel="stylesheet" href="css/estilo.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,15 +21,20 @@
         <header class="bg-off">
             <section class="topo largura-maxima">
                 <a href="#topo">
-                    <img class="logo-topo" src="img/Logotipo Principal.webp" alt="Logotipo Thais Alves">
+                <img class="logo-topo" src="img/Logotipo-Principal.webp" alt="Logotipo Thais Alves">
                 </a>
                 <nav>
+                    <!--Checkbox escondido para controlar o menu-->
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                    <!--Label que será o ícone do menu-->
+                    <label for="menu-toggle" class="icone-menu">&#9776;</label>
+
                     <ul class="lista-menu">
                         <li><a class="links-menu" href="#especialidade">Especialidade</a></li>
                         <li><a class="links-menu" href="#beneficios">Benefícios</a></li>
                         <li><a class="links-menu" href="#sobre">Sobre Mim</a></li>
                         <li><a class="links-menu" href="#atendimento">Sessão</a></li>
-                        <li><a class="links-menu" href="#formulario">Contato</a></li>
+                        <li><a class="links-menu" href="#contato">Contato</a></li>
                     </ul>
                 </nav>
             </section>
@@ -37,22 +42,23 @@
 
         <main>
             <section id="topo" class="container-hero bg-azul">
-                <div class="bg-hero">
-                    <div class=" subcont-hero largura-maxima">
-                        <div class="texto-hero">
-                            <h1>
-                                <span class="texto-rosa">Cuidar</span> da mente é um ato de
-                                <span class="texto-rosa">coragem</span> e <span class="texto-rosa">amor</span> próprio.
-                            </h1>
-                            <p>
-                                Atendimento psicológico online para quem busca equilíbrio emocional, autoconhecimento e
-                                qualidade de vida.
-                            </p>
-                            <a class="btn-ca" href="https://wa.me/5511988901392?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20
-                            sobre%20o%20atendimento%20psicol%C3%B3gico." target="_blank">Agendar consulta</a>
-                        </div>
-                        <div class="img-thais-hero">
-                        </div>
+                <div class=" subcont-hero largura-maxima">
+                    <div class="texto-hero">
+                        <h1>
+                            <span class="texto-rosa">Cuidar</span> da mente é um ato de
+                            <span class="texto-rosa">coragem</span> e <span class="texto-rosa">amor</span> próprio.
+                        </h1>
+                        <p>
+                            Atendimento psicológico online para quem busca equilíbrio emocional, autoconhecimento 
+                            e qualidade de vida.
+                        </p>
+                        <a class="btn-ca" href="https://wa.me/5511988901392?text=Ol%C3%A1%2C%20gostaria%20de%20
+                        saber%20mais%20sobre%20o%20atendimento%20psicol%C3%B3gico." target="_blank">
+                            Agendar consulta
+                        </a>
+                    </div>
+
+                    <div class="img-thais-hero">
                     </div>
                 </div>
             </section>
@@ -60,32 +66,34 @@
             <section id="especialidade" class="container-especialidade">
                 <div class="largura-maxima">
                     <h2>Como posso te ajudar?</h2>
+                    
                     <p class="limita-paragrafo">
                         Atuo com a <strong>Terapia Cognitivo-Comportamental (TCC)</strong>, abordagem baseada em evidências 
                         científicas que ajuda a entender como pensamentos influenciam emoções e comportamentos. 
                         Com ela, é possível lidar com ansiedade, depressão, autoestima, insegurança e reconhecer 
                         padrões disfuncionais, promovendo mais equilíbrio e bem-estar no dia a dia.
                     </p>
+
                     <div class="subcont-cards">
                         <div class="card">
                             <h3 class="foco">Foco no presente</h3>
                             <p class="p-cards">
-                                A TCC é uma abordagem centrada no presente, que ajuda a enfrentar situações reais e
-                                atuais, sem deixar de considerar a história de vida da pessoa.
+                                A TCC ajuda a lidar com desafios do presente, sem deixar de valorizar a sua 
+                                história de vida.
                             </p>
                         </div>
                         <div class="card">
                             <h3 class="pratica">Aplicação Prática</h3>
                             <p class="p-cards">
-                                Durante as sessões, são desenvolvidas estratégias para aplicar no dia a dia, 
-                                promovendo autonomia emocional e decisões mais conscientes.
+                                Durante as sessões, você aprende estratégias para o dia a dia, ganhando autonomia 
+                                e clareza.
                             </p>
                         </div>
                         <div class="card">
                             <h3 class="mudanca">Mudança Interna</h3>
                             <p class="p-cards">
-                                Identifica os pensamentos automáticos e crenças limitantes, ajudando na reconstrução 
-                                de uma forma mais saudável de pensar, sentir e agir.
+                                Promove novas formas de sentir, pensar e agir, ajudando a construir uma vida mais 
+                                equilibrada.
                             </p>
                         </div>
                     </div>
@@ -101,12 +109,13 @@
             <section id="beneficios" class="container-beneficios">
                 <div class="largura-maxima">
                     <h2>Porque fazer psicoterapia?</h2>
+
                     <p class="limita-paragrafo">
-                        A psicoterapia é um espaço seguro de fala, escuta e reflexão, que promove autoconhecimento, 
-                        equilíbrio emocional e bem-estar. Mais do que uma ajuda em momentos de crise, ela pode apoiar 
-                        diferentes fases da vida, ajudando você a lidar melhor com suas emoções e viver de forma mais 
-                        saudável.
+                        A psicoterapia é um espaço seguro para falar, ser ouvido e refletir, promovendo 
+                        autoconhecimento, equilíbrio emocional e bem-estar. Ela apoia diferentes fases da vida, 
+                        ajudando a lidar melhor com emoções e viver de forma mais saudável.
                     </p>
+
                     <div class="subcont-beneficios">
                         <div class="texto-beneficios">
                             <p class="titulo-textos"><strong>Na psicoterapia, você pode:</strong></p>
@@ -119,9 +128,13 @@
                                 <li class="itens-beneficios">Entender seus padrões de comportamento;</li>
                                 <li class="itens-beneficios">Promover autocuidado e equilíbrio emocional.</li>
                             </ul>
+
                             <a class="btn-ca" href="https://wa.me/5511988901392?text=Ol%C3%A1%2C%20gostaria%20de%20
-                            saber%20mais%20sobre%20o%20atendimento%20psicol%C3%B3gico." target="_blank">Agendar consulta</a>
+                            saber%20mais%20sobre%20o%20atendimento%20psicol%C3%B3gico." target="_blank">
+                                Agendar consulta
+                            </a>
                         </div>
+
                         <div class="mulher-paz">                            
                         </div>
                     </div>
@@ -134,49 +147,47 @@
                     <div class="cont-img-texto">
                         <div class="img-thais-sobre">
                         </div>
-                        <p class="titulo-textos p-crp"><strong>Thais Alves - CRP 06/166359</strong></p>
 
+                        <p class="titulo-textos p-crp"><strong>Thais Alves - CRP 06/166359</strong></p>
                     </div>
                     <div class="texto-sobre">
-                        <div>
-                            <p class="limita-paragrafo">
-                                Olá, eu sou a Thais Alves, psicóloga formada há 5 anos e especialista em Terapia
-                                Cognitivo-Comportamental (TCC). Tenho como propósito acolher e apoiar meus pacientes que
-                                buscam compreender suas emoções, desenvolver autoconhecimento e conquistar uma vida mais
-                                leve e equilibrada. Sempre acreditei no poder da escuta empática e no cuidado com o outro,
-                                por isso escolhi a psicologia como forma de transformar vidas por meio do vínculo, da ciência
-                                e da confiança.
-                            </p>
-                        </div> 
+                        <p class="limita-paragrafo">
+                            Olá, eu sou a Thais Alves, psicóloga formada há 5 anos e especialista em Terapia
+                            Cognitivo-Comportamental (TCC). Tenho como propósito acolher e apoiar meus pacientes que
+                            buscam compreender suas emoções, desenvolver autoconhecimento e conquistar uma vida mais
+                            leve e equilibrada. Sempre acreditei no poder da escuta empática e no cuidado com o outro,
+                            por isso escolhi a psicologia como forma de transformar vidas por meio do vínculo, da 
+                            ciência e da confiança.
+                        </p>
                     </div>
-                    <div class="img-thais-mobile">
-                    </div> 
                 </div>
             </section>
 
             <section id="atendimento" class="container-atendimento">
                 <div class="largura-maxima">
                     <h2>Formato de atendimento</h2>
+
                     <div class="subcont-atendimento">
                         <div class="atendimento-online">
-                            <p class="limita-paragrafo">
-                                Realizo <strong>atendimentos online</strong> para facilitar o acesso à psicoterapia de qualquer lugar do 
-                                Brasil ou do mundo. Essa modalidade garante conforto, flexibilidade de horários e segurança, 
-                                mantendo a mesma eficácia do atendimento presencial.
-                            </p>
+                            <p><strong>Psicoterapia online</strong></p>
+
+                            <div class="como-funciona">
+                                <ul class="lista-funciona">
+                                    <li class="itens-funciona">Vídeo chamada em plataformas seguras</li>
+                                    <li class="itens-funciona">Sessões de 50 minutos, leves e acolhedoras</li>
+                                    <li class="itens-funciona">Você escolhe o ambiente mais confortável</li>
+                                    <li class="itens-funciona">Indicada para adolescentes, adultos e idosos</li>
+                                </ul>
+                            </div>    
                         </div>
-                        <div class="como-funciona limita-paragrafo">
-                            <ul class="lista-funciona">
-                                <li class="itens-funciona">Vídeo chamada, em plataformas seguras</li>
-                                <li class="itens-funciona">Sessão com duração média de 50 minutos</li>
-                                <li class="itens-funciona">Você define o ambiente mais confortável</li>
-                                <li class="itens-funciona">Indicada para adolescentes, adultos e idosos</li>
-                            </ul>
+
+                        <div class="img-celular-notebook">
                         </div>
-                        <div class="link-atendimento">
-                            <a class="btn-ca" href="https://wa.me/5511988901392?text=Ol%C3%A1%2C%20gostaria%20de%20saber%
-                            20mais%20sobre%20o%20atendimento%20psicol%C3%B3gico." target="_blank">Agendar consulta</a>
-                        </div>
+                    </div>
+
+                    <div class="link-atendimento">
+                        <a class="btn-ca btn-atendimento" href="https://wa.me/5511988901392?text=Ol%C3%A1%2C%20gostaria%20de%20saber%
+                        20mais%20sobre%20o%20atendimento%20psicol%C3%B3gico." target="_blank">Agendar consulta</a>
                     </div>
                 </div>
             </section>
@@ -187,44 +198,69 @@
                 </div>
             </section>
 
-            <section id="formulario" class="container-formulario">
+            <section id="contato" class="container-formulario">
                 <div class="largura-maxima">
                     <div class="subcont-formulario">
-                        <h2>Preencha o fomulário de contato</h2>
+                        <h2>Preencha ou chame no WhatsApp</h2>
+                        
                         <form class="form-contato" action="">
                             <div class="campo-form">
                                 <label class="nome-form" for="nome">Nome:</label>
-                                <input class="input-form" type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                                <input class="input-form" type="text" id="nome" name="nome" 
+                                placeholder="Digite seu nome completo" required>
                             </div>
                             <div class="campo-form">
                                 <label class="nome-form" for="whatsapp">WhatsApp:</label>
-                                <input class="input-form" type="tel" id="whatsapp" name="whatsapp" placeholder="(xx) xxxxx-xxxx" required>
+                                <input class="input-form" type="tel" id="whatsapp" name="whatsapp" 
+                                placeholder="(xx) xxxxx-xxxx" required>
                             </div>
                             <div class="campo-form">
                                 <label class="nome-form" for="email">E-mail:</label>
-                                <input class="input-form" type="email" id="email" name="email" placeholder="Digite seu e-mail mais usado" required>
+                                <input class="input-form" type="email" id="email" name="email" 
+                                placeholder="Digite seu e-mail mais usado" required>
+                            </div>
+
+                            <div class="btns-form">
+                                <button class="btn-enviar" type="submit">Enviar</button>
+
+                                <a class="btn-whats" href="https://wa.me/5511988901392?text=Ol%C3%A1%2C%20gostaria%
+                                20de%20saber%20mais%20sobre%20o%20atendimento%20psicol%C3%B3gico." target="_blank">
+                                    WhatsApp
+                                </a>
                             </div>
                         </form>
                     </div>
                 </div>    
             </section>
 
-            <a class="botao-whats" href="https://wa.me/5511988901392?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20
-            sobre%20o%20atendimento%20psicol%C3%B3gico." target="_blank">
+            <a class="whats-flutuante" href="https://wa.me/5511988901392?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais
+            %20sobre%20o%20atendimento%20psicol%C3%B3gico." target="_blank">
                 <img src="img/Whats.webp" alt="WhatsApp">
             </a>
         </main>
 
         <footer class="container-rodape bg-azul">
             <div class="subcont-rodape largura-maxima">
-                <img class="logo-rodape" src="img/Logotipo Secundário.webp" alt="Logotipo Thais Alves">
-                <div class="contatos">
-                    <a class="whats" href="https://wa.me/5511988901392?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20
-                    sobre%20o%20atendimento%20psicol%C3%B3gico." target="_blank">11 98890-1392</a>
+                <img class="logo-rodape" src="img/Logotipo-Secundário.webp" alt="Logotipo Thais Alves">
 
-                    <a class="insta" href="https://www.instagram.com/psico.thaisalves/" target="_blank">@psico.thaisalves</a>
+                <div class="contatos">
+                    <a class="whats" href="https://wa.me/5511988901392?text=Ol%C3%A1%2C%20gostaria%20de%20saber%
+                    20mais%20sobre%20o%20atendimento%20psicol%C3%B3gico." target="_blank">
+                        11 98890-1392
+                    </a>
+
+                    <a class="insta" href="https://www.instagram.com/psico.thaisalves/" target="_blank">
+                        @psico.thaisalves
+                    </a>
+
+                    <a class="email" href="mailto:thaissalvespsicologa@gmail.com" target="_blank">
+                        thaissalvespsicologa@gmail.com
+                    </a>
+
+                    <p class="cnpj">CNPJ: 60.538.403/0001-10</p>
                 </div>
             </div>
+
             <div class="subcont-direitos bg-azul">
                 <div class="texto-direitos largura-maxima">
                     <h5>© 2025 Thais Alves. Todos os direitos reservados.</h5>
@@ -232,5 +268,17 @@
                 </div>
             </div>
         </footer>
+
+        <script>
+            // Pega todos os links dentro do menu
+            const menuLinks = document.querySelectorAll('.lista-menu a');
+            const toggle = document.querySelector('.menu-toggle');
+
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                toggle.checked = false; // Desmarca o checkbox -> fecha o menu
+                });
+            });
+        </script>
     </body>
 </html>

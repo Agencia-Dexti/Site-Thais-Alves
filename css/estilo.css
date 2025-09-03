@@ -85,6 +85,10 @@ p{
     color: var(--rosa);
 }
 
+.texto-azul{
+    color: var(--azul);
+}
+
 strong{
     font-weight: 600;
 }
@@ -96,31 +100,47 @@ strong{
 }
 
 .btn-ca{
-    max-width: 250px;
-    font-size: 20px;
+    max-width: 300px;
+    font-size: 18px;
     font-weight: 500;
     text-align: center;
     color: var(--off);
     background-color: var(--rosa);
-    padding: 10px 25px;
+    padding: 12px 25px;
     border-radius: 15px;
-    margin-top: 10px;
-    margin-bottom: 12px;
+    margin: 10px 0 12px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-ca::after{
+    content: "";
+    width: 22px;
+    height: 22px;
+    background-image: url('../img/ícones/WhatsApp-Off.webp');
+    background-size: contain;
 }
 
 .btn-ca:hover{
-    background: linear-gradient(90deg, var(--rosa-escuro), var(--rosa));
+    background: linear-gradient(90deg, var(--rosa), #f8428e);
+    border: 2px solid #f8428e;
 }
 
-.botao-whats{
-        width: 50px;
-        position: fixed;
-        right: 20px;
-        bottom: 20px;
-        z-index: 1;
-    }
+.btn-atendimento{
+    margin: 0 auto;
+}
 
-.botao-whats img{
+.whats-flutuante{
+    width: 50px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1;
+}
+
+.whats-flutuante img{
     width: 100%;
 }
 /*FIM ESTILOS REUTILIZAVEIS*/
@@ -132,7 +152,7 @@ header{
     position: fixed;
     padding: 10px 0;
     box-shadow: 0 0 10px 1px #9b9b9b;
-    z-index: 1;
+    z-index: 10;
 }
 
 .topo{
@@ -158,27 +178,23 @@ header{
     color: var(--rosa);
 }
 
-.menu-contato{
-    border: 2px solid var(--rosa);
-    border-radius: 5px;
-    padding: 5px 10px;
+/*Estilos do menu hamburguer (somente mobile)*/
+.menu-toggle{
+    display: none; /*Esconde o checkbox*/
 }
 
-.menu-contato:hover{
-    background-color: var(--rosa);
-    color: var(--azul);
+.icone-menu{
+    display: none;
+    font-size: 34px;
+    cursor: pointer;
+    user-select: none;
 }
 /*FIM ESTILOS HEADER*/
 
 /*INÍCIO ESTILOS SEÇÃO HERO*/
 .container-hero{
     width: 100%;
-    background: linear-gradient(90deg, var(--azul), var(--azul), var(--azul), #1d77c0, #1d77c0);
-}
-
-.bg-hero{
-    width: 100%;
-    height: 100%;
+    background: linear-gradient(150deg, #186aad, var(--azul));
 }
 
 .subcont-hero{
@@ -187,11 +203,12 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
 .texto-hero{
     max-width: 470px;
-    min-width: 250px;
+    min-width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -246,23 +263,23 @@ h1{
 }
 
 .card{
-    max-width: 290px;
+    max-width: 280px;
     background-color: var(--off);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 40px 30px;
+    padding: 30px 30px;
     gap: 15px;
     border-radius: 35px 15px;
     border: 2px solid var(--rosa);
 }
 
 h3{
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 600;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 
 h3::before{
@@ -291,7 +308,7 @@ h3::before{
 .container-faixa{
     width: 100%;
     height: 200px;
-    background-image: url('../img/Flor\ Dente-de-Leão.webp');
+    background-image: url('../img/Flor-Dente-de-Leão.webp');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -307,19 +324,7 @@ h4{
     font-size: 24px;
     font-weight: 500;
     padding: 6px 30px;
-    margin-bottom: 3px;
     border-radius: 10px;
-}
-
-.texto-faixa-2{
-    color: var(--off);
-    background: linear-gradient(90deg, var(--azul), #2887d4);
-    font-size: 24px;
-    font-weight: 500;
-    padding: 6px 30px;
-    margin-bottom: 3px;
-    border-radius: 10px;
-    background: linear-gradient(90deg, var(--rosa-escuro), var(--rosa));
 }
 /*FIM ESTILOS SEÇÃO FAIXA*/
 
@@ -329,12 +334,12 @@ h4{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 40px;
+    gap: 70px;
     margin-top: 55px;
 }
 
 .texto-beneficios{
-    min-width: 410px;
+    min-width: 440px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -347,36 +352,38 @@ h4{
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    gap: 10px;
+    gap: 15px;
     margin-bottom: 15px;
 }
 
 .itens-beneficios{
+    font-size: 18px;
     font-weight: 300;
     display: flex;
-    justify-content: center;
-    align-items: first baseline;
+    justify-content: flex-start;
+    align-items: flex-start;
     gap: 10px;
 }
 
 .itens-beneficios::before{
     content: "";
-    width: 8px;
-    height: 8px;
+    width: 7px;
+    height: 7px;
     border-radius: 100%;
     background-color: var(--azul);
+    margin-top: 0.42em;
+    flex-shrink: 0;
 }
 
 .mulher-paz{
     width: 100%;
-    max-width: 500px;
-    min-height: 300px;
-    background-image: url('../img/Mulher\ em\ paz.webp');
+    min-height: 380px;
+    background-image: url('../img/Mulher-em-paz.webp');
     background-size: cover;
-    background-position: right;
-    border-radius: 15px;
+    background-position: top;
+    border-radius: 35px 15px;
+    margin-bottom: 15px;
     position: relative;
-    margin-bottom: 10px;
 }
 
 .mulher-paz::after{
@@ -387,7 +394,7 @@ h4{
     width: 100%;
     height: 100%;
     border: 2px solid var(--azul);
-    border-radius: 15px;
+    border-radius: 35px 15px;
 }
 /*FIM ESTILOS SEÇÃO BANEFICIOS*/
 
@@ -395,9 +402,9 @@ h4{
 .container-sobre{
     width: 100%;
     background-color: var(--azul-bebe);
-    background-image: url('../img/Pattern\ 6.png');
+    background-image: url('../img/Pattern-6.png');
     background-size: cover;
-    border-radius: 0 160px 0 160px ;
+    border-radius: 0 160px 0 160px;
 }
 
 .subcont-sobre{
@@ -419,21 +426,21 @@ h4{
 .img-thais-sobre{
     width: 240px;
     height: 240px;
-    background: linear-gradient(315deg, var(--rosa), var(--rosa), var(--off), var(--off), var(--off));
+    background: linear-gradient(135deg, var(--rosa), var(--rosa), var(--azul));
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 10px var(--chumbo);
+    box-shadow: 0 0 8px #777777;
 }
 
 .img-thais-sobre::before{
     content: "";
     width: 230px;
     height: 230px;
-    background-image: url('../img/Thais-Hero.jpeg');
-    background-size: cover;
-    background-position: center;
+    background-image: url('../img/rosa.jpeg');
+    background-size: 160%;
+    background-position: center -25px;
     border-radius: 50%;
 }
 
@@ -448,32 +455,69 @@ h4{
     justify-content: center;
     align-items: start;
     color: var(--off);
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 /*FIM ESTILOS SEÇÃO SOBRE*/
 
 /*INÍCIO ESTILOS SEÇÃO ATENDIMENTO*/
+.subcont-atendimento{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.atendimento-online{
+    min-width: 480px;
+    padding: 32px 25px;
+    background-color: var(--off);
+    border: 2px solid var(--azul);
+    border-radius: 35px 15px;
+}
+
 .como-funciona{
-    margin-top: 45px;
-    margin-bottom: 70px;
+    margin-top: 25px;
 }
 
 .lista-funciona{
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     align-items: start;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 15px;
 }
 
 .itens-funciona{
-    max-width: 335px;
+    font-size: 18px;
     font-weight: 300;
-    background-color: var(--off);
-    border: 2px solid var(--azul);
-    text-align: center;
-    padding: 20px 20px;
-    border-radius: 15px 8px 15px 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.itens-funciona::before{
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background-color: var(--rosa);
+    margin-top: 0.42em;
+    flex-shrink: 0;
+}
+
+.img-celular-notebook{
+    position: relative;
+    right: -60px;
+    top: 5px;
+    width: 100%;
+    height: 300px;
+    background-image: url('../img/Celular-Notebook.webp');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .link-atendimento{
@@ -487,13 +531,14 @@ h4{
     width: 100%;
     padding-top: 90px;
     padding-bottom: 90px;
-    background-image: url('../img/Pattern\ 11.png');
+    background-image: url('../img/Pattern-11.png');
     background-size: 120%;
 }
 
 .subcont-formulario{
-    width: 100%;
-    background: linear-gradient(90deg, var(--azul), #1d77c0);
+    width: 80%;
+    margin: 0 auto;
+    background: linear-gradient(135deg, var(--azul), var(--azul), var(--azul), #1d77c0, #1d77c0);
     padding: 60px 20px 65px 20px;
     box-shadow: 0 0 10px 1px var(--chumbo);
 }
@@ -504,7 +549,7 @@ h4{
 
 .form-contato{
     width: 100%;
-    max-width: 500px;
+    max-width: 550px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -523,6 +568,7 @@ h4{
 
 .nome-form{
     color: var(--off);
+    font-size: 18px;
 }
 
 .input-form{
@@ -530,8 +576,8 @@ h4{
     border: none;
     border-bottom: 4px solid var(--rosa);
     border-radius: 5px;
-    font-size: 16px;
-    padding: 6px;
+    font-size: 18px;
+    padding: 5px 10px;
     color: var(--chumbo);
 }
 
@@ -539,6 +585,58 @@ h4{
     color: var(--chumbo);
     opacity: 0.5;
     font-weight: 300;
+}
+
+.btns-form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-enviar, .btn-whats{
+    width: 48%;
+    min-width: 200px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--off);
+    padding: 8px 25px;
+    border-radius: 15px;
+    margin-top: 20px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-enviar{
+    background-color: var(--rosa);
+}
+
+.btn-enviar:hover{
+    background: linear-gradient(90deg, var(--rosa), #f8428e);
+    border: 2px solid #f8428e;
+}
+
+.btn-whats{
+    background-color: #3dc525;
+}
+
+.btn-whats::after{
+    content: "";
+    width: 22px;
+    height: 22px;
+    background-image: url('../img/ícones/WhatsApp-Off.webp');
+    background-size: contain;
+}
+
+.btn-whats:hover{
+    background: linear-gradient(90deg, #6de458, #3dc525);
+    border: 2px solid #3dc525;
 }
 /*FIM ESTILOS SEÇÃO FORMULÁRIO*/
 
@@ -563,17 +661,24 @@ h4{
     width: 220px;
 }
 
+.cnpj{
+    color: var(--off);
+    font-size: 18px;
+}
+
 .contatos{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    gap: 10px;
+    gap: 15px;
 }
 
 .whats,
-.insta{
+.insta,
+.email{
     color: var(--off);
+    font-size: 18px;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -583,12 +688,14 @@ h4{
 }
 
 .whats::before,
-.insta::before{
+.insta::before,
+.email::before{
     content: "";
     width: 20px;
     height: 20px;
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .whats::before{
@@ -599,8 +706,12 @@ h4{
     background-image: url('../img/ícones/Instagram.webp');
 }
 
+.email::before{
+    background-image: url('../img/ícones/E-mail.webp');
+}
+
 .subcont-direitos{
-    box-shadow: 0 0 8px 0px #042e52;
+    box-shadow: 0 0 8px 0px #0a2447;
 }
 
 .texto-direitos{
@@ -610,7 +721,7 @@ h4{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 7px;
     padding: 10px 0;
 }
 
@@ -628,113 +739,153 @@ h5{
 
 
 /*INÍCIO ESTILOS MEDIA QUERY*/
-@media (min-width: 768px){
-    .img-thais-mobile{
-        display: none;
+@media (max-width: 979px){
+    .btn-ca,
+    .btn-enviar{
+        background: linear-gradient(90deg, var(--rosa), #f8428e);
+        border: 2px solid #f8428e;
+    }
+
+    .btn-whats{
+        background: linear-gradient(90deg, #6de458, #3dc525);
+        border: 2px solid #3dc525;
+    }
+    
+    .texto-hero{
+        max-width: 400px;
+    }
+
+    h1{
+        color: var(--off);
+        font-size: 38px;
+        font-weight: 500;
+        line-height: 56px;
+    }
+
+    .img-thais-hero{
+        width: 100%;
+        height: 380px;
+        margin-top: 10px;
+    }
+
+    .img-thais-hero::before{
+        content: "";
+        width: calc(100% - 20px);
+        height: 360px;
     }
 }
 
-@media (max-width: 979px){
-    .topo{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        padding: 5px 0;
-    }
-
-    main{
-        width: 100%;
-        position: relative;
-        top: 110px;
-    }
-
-    .container-hero{
-        scroll-margin-top: 110px;
-    }
-
-    .container-beneficios,
-    .container-sobre,
-    .container-atendimento,
-    .container-especialidade{
-        scroll-margin-top: 90px;
-    }
-
-    .subcont-cards{
-        max-width: 80%;
-        margin: 40px auto 0 auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-    }
-
+@media (max-width: 850px){
     .card{
-        max-width: 100%;
-        background-color: var(--off);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 40px 30px;
-        gap: 15px;
-        border-radius: 30px 15px;
-        border: 2px solid var(--rosa);
+        min-height: 310px;
+        justify-content: flex-start;
     }
 
-    .img-thais{
-        min-height: 330px;
-        background-position: center;
+    p{
+        font-size: 16px;
+        line-height: 1.5;
     }
 
-    .subcont-atendimento{
+    .texto-beneficios{
+        min-width: 380px;
+    }
+    
+    .itens-beneficios,
+    .itens-funciona{
+        font-size: 16px;
+    }
+
+    .mulher-paz{
+        min-height: 350px;
+    }
+
+    .container-sobre{
+        border-radius: 0 120px 0 120px;
+    }
+
+    .subcont-formulario{
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        gap: 30px;
     }
 
-    .atendimento-online,
-    .como-funciona{
-        width: 100%;
-        max-width: 650px;
+    .nome-form{
+        font-size: 16px;
     }
 
-    .container-rodape{
-        top: 120px;
+    .input-form{
+        font-size: 16px;    
+    }
+
+    .atendimento-online{
+        min-width: 70%;
+        padding: 32px 60px;
+        margin: 0 auto;
+    }
+
+    .img-celular-notebook{
+        display: none;
     }
 }
 
 @media (max-width: 767px){
-    .bg-hero{
+    .icone-menu{
+        display: block; /*Mostra ícone do menu*/
+    }
+
+    /* Esconde menu por padrão */
+    .lista-menu{
+        flex-direction: column;
         width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, #0c5189, #0c5189, #0c5189, #0c5189e5, #0c518900), url('../img/Pattern.webp');
-        background-size: 220%;
-        background-position: right;
+        background: var(--off);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        border-top: 1px solid #ccc;
+        gap: 0;
+
+        /*Animação*/
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
     }
 
-    .texto-hero{
-        max-width: 380px;
+    .lista-menu li{
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+        padding: 18px 0;
     }
 
-    h1{
-        font-size: 36px;
+    /* Quando marcado, expande */
+    .menu-toggle:checked ~ .lista-menu{
+        max-height: 500px; /*valor maior que altura dos itens*/
+        transition: max-height 0.4s ease-in;
     }
-    
-    .link-contato{
+
+    .img-thais-hero{
         display: none;
     }
 
     .subcont-cards{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .card{
         max-width: 100%;
+        min-height: auto;
+    }
+
+    .container-faixa{
+        height: 160px;
     }
 
     h4{
-        font-size: 22px;
+        font-size: 18px;
+    }
+
+    .texto-beneficios{
+        align-items: center;
+        margin: 0 auto;
     }
 
     .mulher-paz{
@@ -749,135 +900,81 @@ h5{
         gap: 30px;
     }
 
-    .img-thais{
-        display: none;
+    .btns-form{
+        flex-direction: column;
+        gap: 20px;
     }
 
-    .texto-sobre{
+    .btn-enviar, .btn-whats{
+        margin-top: 0;
         width: 100%;
-    }
-
-    .texto-sobre h2{
-        margin: 0 auto 25px auto;
-    }
-
-    .img-thais-mobile{
-        width: 50%;
-        margin: 0 auto;
-        min-height: 250px;
-        background-image: url('../img/Profissional\ Thais.webp');
-        background-size: cover;
-        position: relative;
-        border-radius: 15px;
-    }
-
-    .img-thais-mobile::after{
-        content: "";
-        position: absolute;
-        top: 7px;
-        left: 7px;
-        width: 100%;
-        height: 100%;
-        border: 3px solid var(--rosa);
-        border-radius: 15px;
     }
 
     .subcont-rodape{
-        width: 100%;
-        display: flex;
-        justify-content: center;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .contatos{
         align-items: center;
-        gap: 80px;
-        padding: 70px 0;
+        gap: 20px;
     }
 }
 
 @media (max-width: 480px){
+    .limita-paragrafo{
+        text-align: center;
+    }
+
     .botao-whats{
         width: 45px;
+    }
+
+    p{
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .btn-ca,
+    .btn-enviar,
+    .btn-whats{
+        max-width: none;
+        width: 100%;
     }
 
     h2{
         font-size: 26px;
     }
 
-    .links-menu, 
-    .link-contato{
-        font-size: 14px;
-    }
-
-    .bg-hero{
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(150deg, #0c5189, #0c5189, #0c5189, #0c5189f3, #0c5189be), url('../img/Pattern.webp');
-        background-size: 320%;
-        background-position: right;
-    }
-
-    .texto-hero{
-        align-items: center;
-        text-align: center;
-    }
-
-    .limita-paragrafo{
-        text-align: center;
-    }
-
-    .card{
-        min-height: 300px;
-    }
-
     h4{
+        font-size: 16px;
         max-width: 250px;
-        margin: 0 auto;
+        line-height: 1.7;
+        padding: 8px 30px;
     }
 
     .texto-beneficios{
         min-width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
     }
 
-    .titulo-textos{
+    .itens-beneficios,
+    .itens-funciona{
+        font-size: 15px;
+    }
+
+    .atendimento-online{
+        min-width: 100%;
+        padding: 32px 30px;
+        margin: 0 auto;
+    }
+
+    .texto-hero{
+        max-width: 350px;
+        margin: 0 auto;
+        align-items: center;
         text-align: center;
     }
-
-    .img-thais-mobile{
-        width: 60%;
-    }
-
-    .como-funciona{
-        width: 100%;
-        border-radius: 10px;
-        border: 2px solid var(--azul);
-        padding: 20px 5px 20px 15px;
-    }
-
-    .subcont-rodape{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 40px;
-        padding: 60px 0;
-    }
-
-    .logo-rodape{
-        width: 200px;
-    }
-
-    .contatos{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 12px;
-    }
-}
+}    
 
 @media (max-width: 370px){
     .logo-topo{
