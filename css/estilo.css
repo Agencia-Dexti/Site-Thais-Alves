@@ -931,9 +931,13 @@ h5{
     }
 
     .container-hero{
-        background: linear-gradient(155deg, #171d221c, #14233162, #1b5280, #0c5189), url('../img/Thais-Hero.jpeg');
+        background: linear-gradient(155deg, #2329313b, #31557775, #2d608a, #0c5189), url('../img/Thais-Hero.jpeg');
         background-size: 118%;
         background-position: center center;
+    }
+
+    h1{
+        text-shadow: 2px 1px 4px #00000086;
     }
 
     p{
