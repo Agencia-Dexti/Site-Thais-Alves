@@ -577,7 +577,7 @@ h4{
     border-bottom: 4px solid var(--rosa);
     border-radius: 5px;
     font-size: 18px;
-    padding: 5px 10px;
+    padding: 7px 10px;
     color: var(--chumbo);
 }
 
@@ -931,8 +931,8 @@ h5{
     }
 
     .container-hero{
-        background: linear-gradient(150deg, #186aad1e, #186aad8a, #0c5189f1, #0c5189), url('../img/Thais-Hero.jpeg');
-        background-size: 115%;
+        background: linear-gradient(155deg, #171d221c, #14233162, #1b5280, #0c5189), url('../img/Thais-Hero.jpeg');
+        background-size: 118%;
         background-position: center center;
     }
 
