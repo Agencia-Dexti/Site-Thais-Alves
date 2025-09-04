@@ -931,7 +931,7 @@ h5{
     }
 
     .container-hero{
-        background: linear-gradient(155deg, #2329313b, #31557775, #2d608a, #0c5189), url('../img/Thais-Hero.jpeg');
+        background: linear-gradient(155deg, #2329313b, #1931478f, #2d608a, #0c5189), url('../img/Thais-Hero.jpeg');
         background-size: 118%;
         background-position: center center;
     }
@@ -985,7 +985,7 @@ h5{
     .texto-beneficios{
         min-width: 100%;
     }
-
+    
     .itens-beneficios,
     .itens-funciona{
         font-size: 15px;
