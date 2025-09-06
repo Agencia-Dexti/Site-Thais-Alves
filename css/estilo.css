@@ -185,9 +185,10 @@ header{
 
 .icone-menu{
     display: none;
-    font-size: 34px;
+    font-size: 32px;
     cursor: pointer;
     user-select: none;
+    color: var(--azul);
 }
 /*FIM ESTILOS HEADER*/
 
@@ -245,7 +246,7 @@ h1{
     content: "";
     width: 370px;
     height: 370px;
-    background-image: url('../img/Thais-Hero.jpeg');
+    background-image: url('../img/Thais-Hero.webp');
     background-size: cover;
     background-position: center;
     border-radius: 50%;
@@ -402,7 +403,7 @@ h4{
 .container-sobre{
     width: 100%;
     background-color: var(--azul-bebe);
-    background-image: url('../img/Pattern-6.png');
+    background-image: url('../img/Pattern-6.webp');
     background-size: cover;
     border-radius: 0 160px 0 160px;
 }
@@ -438,7 +439,7 @@ h4{
     content: "";
     width: 230px;
     height: 230px;
-    background-image: url('../img/rosa.jpeg');
+    background-image: url('../img/Thais-Sobre.webp');
     background-size: 160%;
     background-position: center -25px;
     border-radius: 50%;
@@ -531,7 +532,7 @@ h4{
     width: 100%;
     padding-top: 90px;
     padding-bottom: 90px;
-    background-image: url('../img/Pattern-11.png');
+    background-image: url('../img/Pattern-11.webp');
     background-size: 120%;
 }
 
@@ -763,7 +764,7 @@ h5{
     }
 
     .img-thais-hero{
-        width: 100%;
+        width: 380px;
         height: 380px;
         margin-top: 10px;
     }
@@ -855,6 +856,10 @@ h5{
         padding: 18px 0;
     }
 
+    .links-menu{
+        padding: 12px 40px;
+    }
+
     /* Quando marcado, expande */
     .menu-toggle:checked ~ .lista-menu{
         max-height: 500px; /*valor maior que altura dos itens*/
@@ -919,6 +924,12 @@ h5{
         align-items: center;
         gap: 20px;
     }
+
+    .container-hero{
+        background: linear-gradient(155deg, #2329313b, #1931478f, #2d608a, #0c5189), url('../img/Thais-Hero.webp');
+        background-size: 100%;
+        background-position: left 20%;
+    }
 }
 
 @media (max-width: 480px){
@@ -930,8 +941,12 @@ h5{
         width: 45px;
     }
 
+    .logo-topo{
+        width: 160px;
+    }
+
     .container-hero{
-        background: linear-gradient(155deg, #2329313b, #1931478f, #2d608a, #0c5189), url('../img/Thais-Hero.jpeg');
+        background: linear-gradient(155deg, #2329313b, #1931478f, #2d608a, #0c5189), url('../img/Thais-Hero.webp');
         background-size: 118%;
         background-position: center center;
     }
@@ -985,7 +1000,7 @@ h5{
     .texto-beneficios{
         min-width: 100%;
     }
-    
+
     .itens-beneficios,
     .itens-funciona{
         font-size: 15px;
@@ -993,7 +1008,7 @@ h5{
 
     .atendimento-online{
         min-width: 100%;
-        padding: 32px 30px;
+        padding: 32px 20px;
         margin: 0 auto;
     }
 
@@ -1007,7 +1022,7 @@ h5{
 
 @media (max-width: 370px){
     .logo-topo{
-        width: 150px;
+        width: 140px;
     }
 
     h1{
