@@ -185,7 +185,7 @@ header{
 
 .icone-menu{
     display: none;
-    font-size: 32px;
+    font-size: 34px;
     cursor: pointer;
     user-select: none;
     color: var(--azul);
@@ -945,6 +945,14 @@ h5{
         width: 160px;
     }
 
+    .icone-menu{          
+        font-size: 30px;
+    }                   
+
+    main{
+        top: 60px;
+    }
+
     .container-hero{
         background: linear-gradient(155deg, #2329313b, #1931478f, #2d608a, #0c5189), url('../img/Thais-Hero.webp');
         background-size: 118%;
@@ -1023,6 +1031,10 @@ h5{
 @media (max-width: 370px){
     .logo-topo{
         width: 140px;
+    }
+
+    main{
+        top: 50px;
     }
 
     h1{
