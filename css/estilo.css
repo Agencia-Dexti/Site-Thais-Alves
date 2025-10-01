@@ -22,8 +22,8 @@
 .largura-maxima{
     max-width: 980px;
     margin: 0 auto;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .bg-off{
@@ -727,7 +727,7 @@ h4{
 }
 
 h5{
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 300;
     color: var(--off);
 }
@@ -759,7 +759,6 @@ h5{
     h1{
         color: var(--off);
         font-size: 38px;
-        font-weight: 500;
     }
 
     .img-thais-hero{
@@ -933,7 +932,7 @@ h5{
 
 @media (max-width: 480px){
     .limita-paragrafo{
-        text-align: center;
+        text-align: justify;
     }
 
     .botao-whats{
@@ -1006,6 +1005,16 @@ h5{
 
     .texto-beneficios{
         min-width: 100%;
+    }
+
+    .lista-beneficios{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15px;
     }
 
     .itens-beneficios,
